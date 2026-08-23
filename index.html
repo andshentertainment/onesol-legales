@@ -1,188 +1,170 @@
 <!DOCTYPE html>
-<html lang="es" class="light">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Centro Legal | 1 Sol</title>
-  <meta name="description" content="Consulta los Términos y Condiciones y la Política de Privacidad de la aplicación móvil 1 Sol." />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
-
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Centro Legal de 1 Sol: términos y condiciones y política de privacidad.">
+  <title>1 Sol | Centro Legal</title>
+  <link rel="icon" type="image/png" href="Viby-VibraApp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
-<body class="bg-slate-50 dark:bg-slate-900 font-sans text-slate-800 dark:text-slate-200 min-h-screen">
-
-  <!-- ══════════════════════════════════════════ -->
-  <!--  HEADER                                    -->
-  <!-- ══════════════════════════════════════════ -->
-  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-
-      <!-- Logo / Wordmark -->
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-blue-900 dark:bg-blue-700 flex items-center justify-center flex-shrink-0">
-          <span class="text-white font-bold text-sm leading-none">1S</span>
-        </div>
-        <div class="leading-tight">
-          <span class="font-semibold text-slate-900 dark:text-white tracking-tight text-sm sm:text-base">1 Sol</span>
-          <span class="hidden sm:inline text-slate-400 dark:text-slate-500 mx-1.5 text-sm">|</span>
-          <span class="hidden sm:inline text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium">Centro Legal</span>
-        </div>
-      </div>
-
-      <!-- Dark Mode Toggle -->
-      <label class="flex items-center gap-2.5 cursor-pointer select-none" aria-label="Alternar modo oscuro">
-        <!-- Sol -->
-        <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
-        </svg>
-        <!-- Switch -->
-        <div class="relative">
-          <input type="checkbox" id="darkToggle" class="toggle-input sr-only" />
-          <div class="toggle-track w-12 h-6 bg-slate-200 dark:bg-slate-700 rounded-full relative cursor-pointer transition-colors duration-300">
-            <div class="toggle-thumb absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300"></div>
-          </div>
-        </div>
-        <!-- Luna -->
-        <svg class="w-4 h-4 text-slate-400 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-        </svg>
-      </label>
-    </div>
+<body>
+  <div class="reading-progress" id="reading-progress"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Volver al inicio">
+      <span class="brand-mark">1</span>
+      <span>1 Sol <em>/</em> Centro Legal</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menú</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="#la-app">La app</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#contacto">Contacto</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+        <span class="theme-icon">☼</span><span class="theme-label">Modo oscuro</span>
+      </button>
+    </nav>
   </header>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!--  HERO                                      -->
-  <!-- ══════════════════════════════════════════ -->
-  <section class="max-w-7xl mx-auto px-5 sm:px-8 pt-12 pb-8">
-    <p class="text-xs font-semibold tracking-widest text-blue-900 dark:text-blue-400 uppercase mb-3">Documentos Legales</p>
-    <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-3">
-      Tu diversión,<br class="sm:hidden" /> bien respaldada.
-    </h1>
-    <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base max-w-xl">
-      Aquí encontrarás los documentos que rigen el uso de <strong class="text-slate-700 dark:text-slate-300">1 Sol</strong>. Léelos con calma, son simples y directos.
-    </p>
-  </section>
-
-  <!-- ══════════════════════════════════════════ -->
-  <!--  MAIN (Sidebar + Viewer)                   -->
-  <!-- ══════════════════════════════════════════ -->
-  <main class="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
-    <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
-
-      <!-- ──────────────────────── SIDEBAR ──── -->
-      <aside class="w-full lg:w-72 xl:w-80 flex-shrink-0 lg:sticky lg:top-24">
-        <p class="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-3 px-1">Documentos</p>
-
-        <div class="flex flex-row lg:flex-col gap-3">
-
-          <!-- Botón: Términos -->
-          <button
-            id="btn-terms"
-            onclick="showDoc('terms')"
-            class="flex-1 lg:flex-none text-left rounded-2xl px-5 py-4 border
-                   bg-blue-900 text-white border-blue-900 shadow-md"
-          >
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-sm leading-tight">Términos y</p>
-                <p class="font-semibold text-sm leading-tight">Condiciones</p>
-              </div>
-            </div>
-          </button>
-
-          <!-- Botón: Privacidad -->
-          <button
-            id="btn-privacy"
-            onclick="showDoc('privacy')"
-            class="flex-1 lg:flex-none text-left rounded-2xl px-5 py-4 border
-                   bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300
-                   border-slate-200 dark:border-slate-700
-                   hover:border-blue-900/60 dark:hover:border-blue-500/60"
-          >
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-sm leading-tight">Política de</p>
-                <p class="font-semibold text-sm leading-tight">Privacidad</p>
-              </div>
-            </div>
-          </button>
+  <main id="inicio">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> Información clara, sin vueltas</div>
+        <h1 id="hero-title">Todo lo legal.<br><span>En un solo lugar.</span></h1>
+        <p class="hero-intro">Bienvenido al Centro Legal de <strong>1 Sol</strong>: la app donde cada toque cuenta, sin letra pequeña escondida.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#documentos">Explorar documentos <span>↘</span></a>
+          <a class="text-link" href="#la-app">Conoce 1 Sol <span>→</span></a>
         </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay" aria-label="Ilustración de Viby, mascota de VibraApp">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="sticker sticker-top">SIN<br>TRUCOS</div>
+        <div class="image-frame"><img src="Viby-VibraApp.png" alt="Viby, personaje colorido con gafas oscuras"></div>
+        <div class="hero-note"><span class="note-line"></span><strong>Tu privacidad</strong><br>se queda contigo.</div>
+      </div>
+    </section>
 
-        <!-- Tarjeta de contacto -->
-        <div class="mt-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5">
-          <div class="flex items-center gap-2.5 mb-2">
-            <svg class="w-4 h-4 text-blue-900 dark:text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-            </svg>
-            <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">¿Tienes alguna duda?</p>
+    <section class="trust-strip" id="la-app">
+      <div class="section-shell trust-grid">
+        <div class="section-kicker">01 / La idea</div>
+        <div class="trust-content">
+          <h2>Una app de entretenimiento,<br><em>sin sorpresas financieras.</em></h2>
+          <p>1 Sol es una experiencia de colección digital y novedad. Interactúa con una representación visual de una moneda, lleva tu conteo y personaliza tu interfaz. Eso es todo: no es una billetera, una inversión ni un medio de pago.</p>
+          <div class="fact-row">
+            <div class="fact"><span class="fact-number">01</span><strong>Offline</strong><small>Tu progreso vive en tu dispositivo.</small></div>
+            <div class="fact"><span class="fact-number">02</span><strong>Sin cuenta</strong><small>No pedimos nombre, correo ni contraseña.</small></div>
+            <div class="fact"><span class="fact-number">03</span><strong>Sin rastreo</strong><small>No usamos publicidad ni perfilamiento.</small></div>
           </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">
-            Estamos para ayudarte. Escríbenos y te responderemos a la brevedad.
-          </p>
-          <a
-            href="mailto:soporte.andsh@gmail.com"
-            class="block w-full text-center text-xs font-semibold py-2.5 px-4 rounded-xl
-                   bg-blue-900 dark:bg-blue-800 text-white
-                   hover:bg-blue-800 dark:hover:bg-blue-700"
-          >
-            soporte.andsh@gmail.com
-          </a>
         </div>
+      </div>
+    </section>
 
-        <p class="mt-4 text-center text-xs text-slate-400 dark:text-slate-600 px-1">
-          Última actualización: 23 de agosto de 2026
-        </p>
-      </aside>
-
-      <!-- ──────────────────── DOCUMENT VIEWER ── -->
-      <div id="doc-viewer" class="flex-1 min-w-0">
-        <!-- El contenido se carga dinámicamente vía fetch() en app.js -->
+    <section class="documents section-shell" id="documentos" aria-labelledby="documents-title">
+      <div class="documents-heading reveal">
+        <div class="section-kicker">02 / Documentos</div>
+        <div>
+          <h2 id="documents-title">Lee lo importante.</h2>
+          <p>Dos documentos. Cero laberintos.</p>
+        </div>
+        <div class="document-count"><span>02</span> documentos disponibles</div>
       </div>
 
-    </div>
+      <div class="document-list">
+        <article class="document-card is-open reveal">
+          <button class="document-trigger" type="button" aria-expanded="true" aria-controls="terms-content">
+            <span class="document-number">01</span>
+            <span class="document-title"><small>Para usar la app</small><strong>Términos y condiciones</strong></span>
+            <span class="document-arrow">↘</span>
+          </button>
+          <div class="document-content" id="terms-content">
+            <div class="document-meta"><span>Última actualización: 23 de agosto de 2026</span><span>11 secciones</span></div>
+            <div class="legal-copy">
+              <h3>1. Introducción y aceptación</h3>
+              <p>Los presentes Términos y Condiciones regulan el acceso y uso de la aplicación móvil <strong>“1 Sol”</strong>, de titularidad de Andy Jefferson Sullcaray Huaman, identificado con DNI N.° 60905577, persona natural domiciliada en El Tambo, Huancayo, Junín, Perú (en adelante, el “Titular” o “nosotros”).</p>
+              <p>Al descargar, instalar o utilizar de cualquier forma la Aplicación, usted, el usuario, declara haber leído, entendido y aceptado íntegramente estos Términos, así como la Política de Privacidad. Si no está de acuerdo con alguno de estos Términos, deberá abstenerse de usar la Aplicación.</p>
+              <h3>2. Definiciones</h3>
+              <p><strong>Aplicación:</strong> el software móvil “1 Sol”, disponible para dispositivos Android y plataformas compatibles, incluyendo todas sus funcionalidades, contenidos y actualizaciones.</p>
+              <p><strong>Usuario:</strong> cualquier persona que acceda, descargue o utilice la Aplicación.</p>
+              <p><strong>Contenido In-App:</strong> elementos visuales adicionales, como diseños de monedas de 2 o 5 soles y temas de interfaz, accesibles mediante un pago único dentro de la Aplicación.</p>
+              <h3>3. Descripción del servicio y naturaleza de la aplicación</h3>
+              <p>“1 Sol” es una aplicación estrictamente de entretenimiento, colección digital y novedad. Su funcionalidad principal consiste en interactuar de forma táctil con la representación visual de una moneda, llevando un conteo de dichas interacciones.</p>
+              <p>La Aplicación <strong>no constituye una billetera digital, plataforma financiera, sistema de inversión, ni un medio de pago.</strong></p>
+              <h3>4. Descargo de responsabilidad (BCRP)</h3>
+              <p>Las representaciones gráficas, visuales o animadas de monedas peruanas tienen un fin puramente recreativo y artístico. Esta Aplicación no posee afiliación, patrocinio, autorización, ni vínculo oficial alguno con el Banco Central de Reserva del Perú (BCRP) ni con ninguna entidad gubernamental.</p>
+              <p>Los elementos digitales mostrados, obtenidos o desbloqueados no tienen valor monetario real, no son intercambiables por dinero físico, bienes o servicios, y no representan moneda de curso legal.</p>
+              <h3>5. Compras integradas y suscripciones</h3>
+              <p>Todas las transacciones se gestionan exclusivamente a través de los sistemas de facturación de Google Play. El Titular no procesa pagos directamente ni almacena información financiera del Usuario. La compra otorga una licencia limitada, personal, no exclusiva y no transferible para acceder al contenido digital dentro de la Aplicación. Los reembolsos se rigen por las políticas de Google Play y las compras previas pueden restaurarse desde Ajustes.</p>
+              <h3>6. Privacidad y almacenamiento de datos</h3>
+              <p>Todo el progreso del Usuario, incluyendo el contador de interacciones y las preferencias de personalización, se almacena localmente en el dispositivo. La Aplicación no recopila, transmite ni almacena datos personales en servidores externos o bases de datos en la nube.</p>
+              <h3>7. Propiedad intelectual</h3>
+              <p>Todos los derechos sobre el código fuente, interfaz, logotipos y elementos originales pertenecen al Titular. Se concede una licencia limitada para el uso personal y no comercial. Queda prohibida la reproducción, distribución o ingeniería inversa.</p>
+              <h3>8. Limitación de responsabilidad</h3>
+              <p>La Aplicación se ofrece “tal cual” y “según disponibilidad”. En la máxima medida permitida por la ley aplicable, el Titular no será responsable por daños indirectos, incidentales o consecuentes.</p>
+              <h3>9. Modificaciones al servicio y a los términos</h3>
+              <p>El Titular se reserva el derecho de modificar o actualizar la Aplicación y estos Términos en cualquier momento. El uso continuado tras la publicación de cambios implica la aceptación de los nuevos Términos.</p>
+              <h3>10. Ley aplicable y jurisdicción</h3>
+              <p>Estos Términos se rigen por las leyes de la República del Perú. Para cualquier controversia, las partes se someten a la jurisdicción de los jueces y tribunales de Huancayo, Junín, Perú.</p>
+              <h3>11. Contacto</h3>
+              <p>Para consultas relacionadas con estos Términos, puedes escribir a <a href="mailto:soporte.andsh@gmail.com">soporte.andsh@gmail.com</a>.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="document-card reveal reveal-delay">
+          <button class="document-trigger" type="button" aria-expanded="false" aria-controls="privacy-content">
+            <span class="document-number">02</span>
+            <span class="document-title"><small>Para cuidar tus datos</small><strong>Política de privacidad</strong></span>
+            <span class="document-arrow">↘</span>
+          </button>
+          <div class="document-content" id="privacy-content" hidden>
+            <div class="document-meta"><span>Última actualización: 23 de agosto de 2026</span><span>9 secciones</span></div>
+            <div class="legal-copy">
+              <h3>1. Introducción</h3>
+              <p>Esta Política describe cómo Andy Jefferson Sullcaray Huaman, identificado con DNI N.° 60905577 y domiciliado en El Tambo, Huancayo, Junín, Perú, maneja la información de los usuarios de la aplicación móvil “1 Sol”. Al utilizar la Aplicación, usted acepta las prácticas descritas.</p>
+              <h3>2. Responsable del tratamiento</h3>
+              <p><strong>Titular:</strong> Andy Jefferson Sullcaray Huaman<br><strong>Documento:</strong> DNI N.° 60905577<br><strong>Domicilio:</strong> El Tambo, Huancayo, Junín, Perú<br><strong>Correo:</strong> <a href="mailto:soporte.andsh@gmail.com">soporte.andsh@gmail.com</a></p>
+              <h3>3. Datos personales y de uso</h3>
+              <p>“1 Sol” funciona de manera offline y local. No requiere crear una cuenta ni solicita nombre, correo electrónico o contraseñas. El contador de interacciones y el tema visual se guardan estrictamente en la memoria del dispositivo: el Titular no tiene acceso, no transmite esa información a servidores externos ni la almacena en la nube.</p>
+              <p>Si compras contenido visual adicional, la transacción es procesada íntegramente por Google Play Store. El Titular no recopila, procesa ni almacena datos financieros, números de tarjeta ni información de facturación. Solo recibe confirmaciones anónimas para desbloquear el contenido.</p>
+              <h3>4. Permisos del dispositivo</h3>
+              <p>La Aplicación no accede a cámara, micrófono, ubicación, contactos ni galería. Solo requiere permiso de vibración (Haptic Feedback) para mejorar la experiencia táctil; puede desactivarse desde los Ajustes de la Aplicación.</p>
+              <h3>5. Terceros involucrados</h3>
+              <p>Para compras integradas, la Aplicación interactúa con Google Play Billing. Este proveedor actúa bajo sus propias políticas de privacidad y términos de servicio. No compartimos información con redes publicitarias ni con terceros para marketing o perfilamiento.</p>
+              <h3>6. Derechos del Usuario (Derechos ARCO)</h3>
+              <p>Dado que el Titular no recopila ni almacena datos personales en servidores propios, el Usuario tiene control total sobre su información. Para eliminar los datos de uso, basta con desinstalar la Aplicación o borrar sus datos desde los ajustes del sistema operativo.</p>
+              <h3>7. Menores de edad</h3>
+              <p>La Aplicación es de clasificación general y apta para todas las edades. Las compras integradas deben ser realizadas por mayores de edad o menores con autorización y supervisión de sus padres o tutores.</p>
+              <h3>8. Cambios a esta política</h3>
+              <p>Podemos actualizar esta Política periódicamente. El uso continuado tras cualquier modificación implica la aceptación de la nueva Política.</p>
+              <h3>9. Contacto</h3>
+              <p>Para dudas sobre tus datos, puedes escribir a <a href="mailto:soporte.andsh@gmail.com">soporte.andsh@gmail.com</a>.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contacto">
+      <div class="section-shell contact-inner">
+        <div><div class="section-kicker">03 / ¿Una duda?</div><h2>Hablemos claro.</h2></div>
+        <a class="mail-link" href="mailto:soporte.andsh@gmail.com">soporte.andsh@gmail.com <span>↗</span></a>
+      </div>
+    </section>
   </main>
 
-  <!-- ══════════════════════════════════════════ -->
-  <!--  FOOTER                                    -->
-  <!-- ══════════════════════════════════════════ -->
-  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400 dark:text-slate-600">
-      <p>© 2026 Andy Jefferson Sullcaray Huaman. Todos los derechos reservados.</p>
-      <p>Aplicación <strong class="text-slate-500 dark:text-slate-500">1 Sol</strong> · Huancayo, Perú</p>
-    </div>
+  <footer class="site-footer section-shell">
+    <a class="brand" href="#inicio"><span class="brand-mark">1</span><span>1 Sol <em>/</em> Centro Legal</span></a>
+    <p>Hecho para entenderse. <span>© 2026 1 Sol</span></p>
+    <a class="back-top" href="#inicio" aria-label="Volver arriba">↑</a>
   </footer>
-
-  <!-- Lógica de la app -->
-  <script src="app.js" defer></script>
-
 </body>
 </html>
