@@ -1,0 +1,99 @@
+/* ── Scrollbar personalizado ─────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+
+/* ── Transición global de tema ───────────────── */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+button { transition: all 300ms ease !important; }
+
+/* ── Toggle switch ───────────────────────────── */
+.toggle-input:checked + .toggle-track { background-color: #1e3a8a; }
+.toggle-input:checked + .toggle-track .toggle-thumb { transform: translateX(22px); }
+
+/* ── Prosa del documento ─────────────────────── */
+.doc-prose h1 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+.doc-prose h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+.doc-prose p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+.doc-prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.doc-prose li {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 0.35rem;
+}
+.doc-prose .update-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+.dark .doc-prose .update-badge {
+  background-color: #1e3a5f;
+  color: #93c5fd;
+}
+.doc-prose .divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.25rem 0 1.75rem;
+}
+.dark .doc-prose .divider { border-color: #334155; }
+.doc-prose strong { font-weight: 600; }
+.doc-prose a {
+  color: #1e3a8a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.dark .doc-prose a { color: #60a5fa; }
+.doc-prose a:hover { opacity: 0.75; }
+
+/* ── Animación fade del visor ────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.doc-fade { animation: fadeInUp 0.35s ease forwards; }
+
+/* ── Skeleton loader ─────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 0.5rem;
+}
+.dark .skeleton {
+  background: linear-gradient(90deg, #334155 25%, #475569 50%, #334155 75%);
+  background-size: 200% 100%;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

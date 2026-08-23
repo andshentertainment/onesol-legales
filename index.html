@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro Legal | 1 Sol</title>
+  <meta name="description" content="Consulta los Términos y Condiciones y la Política de Privacidad de la aplicación móvil 1 Sol." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-900 font-sans text-slate-800 dark:text-slate-200 min-h-screen">
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  HEADER                                    -->
+  <!-- ══════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+      <!-- Logo / Wordmark -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-blue-900 dark:bg-blue-700 flex items-center justify-center flex-shrink-0">
+          <span class="text-white font-bold text-sm leading-none">1S</span>
+        </div>
+        <div class="leading-tight">
+          <span class="font-semibold text-slate-900 dark:text-white tracking-tight text-sm sm:text-base">1 Sol</span>
+          <span class="hidden sm:inline text-slate-400 dark:text-slate-500 mx-1.5 text-sm">|</span>
+          <span class="hidden sm:inline text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium">Centro Legal</span>
+        </div>
+      </div>
+
+      <!-- Dark Mode Toggle -->
+      <label class="flex items-center gap-2.5 cursor-pointer select-none" aria-label="Alternar modo oscuro">
+        <!-- Sol -->
+        <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+        </svg>
+        <!-- Switch -->
+        <div class="relative">
+          <input type="checkbox" id="darkToggle" class="toggle-input sr-only" />
+          <div class="toggle-track w-12 h-6 bg-slate-200 dark:bg-slate-700 rounded-full relative cursor-pointer transition-colors duration-300">
+            <div class="toggle-thumb absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300"></div>
+          </div>
+        </div>
+        <!-- Luna -->
+        <svg class="w-4 h-4 text-slate-400 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+        </svg>
+      </label>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  HERO                                      -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="max-w-7xl mx-auto px-5 sm:px-8 pt-12 pb-8">
+    <p class="text-xs font-semibold tracking-widest text-blue-900 dark:text-blue-400 uppercase mb-3">Documentos Legales</p>
+    <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-3">
+      Tu diversión,<br class="sm:hidden" /> bien respaldada.
+    </h1>
+    <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base max-w-xl">
+      Aquí encontrarás los documentos que rigen el uso de <strong class="text-slate-700 dark:text-slate-300">1 Sol</strong>. Léelos con calma, son simples y directos.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  MAIN (Sidebar + Viewer)                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <main class="max-w-7xl mx-auto px-5 sm:px-8 pb-16">
+    <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+
+      <!-- ──────────────────────── SIDEBAR ──── -->
+      <aside class="w-full lg:w-72 xl:w-80 flex-shrink-0 lg:sticky lg:top-24">
+        <p class="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-3 px-1">Documentos</p>
+
+        <div class="flex flex-row lg:flex-col gap-3">
+
+          <!-- Botón: Términos -->
+          <button
+            id="btn-terms"
+            onclick="showDoc('terms')"
+            class="flex-1 lg:flex-none text-left rounded-2xl px-5 py-4 border
+                   bg-blue-900 text-white border-blue-900 shadow-md"
+          >
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-sm leading-tight">Términos y</p>
+                <p class="font-semibold text-sm leading-tight">Condiciones</p>
+              </div>
+            </div>
+          </button>
+
+          <!-- Botón: Privacidad -->
+          <button
+            id="btn-privacy"
+            onclick="showDoc('privacy')"
+            class="flex-1 lg:flex-none text-left rounded-2xl px-5 py-4 border
+                   bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300
+                   border-slate-200 dark:border-slate-700
+                   hover:border-blue-900/60 dark:hover:border-blue-500/60"
+          >
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-sm leading-tight">Política de</p>
+                <p class="font-semibold text-sm leading-tight">Privacidad</p>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Tarjeta de contacto -->
+        <div class="mt-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5">
+          <div class="flex items-center gap-2.5 mb-2">
+            <svg class="w-4 h-4 text-blue-900 dark:text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+            <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">¿Tienes alguna duda?</p>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">
+            Estamos para ayudarte. Escríbenos y te responderemos a la brevedad.
+          </p>
+          <a
+            href="mailto:soporte.andsh@gmail.com"
+            class="block w-full text-center text-xs font-semibold py-2.5 px-4 rounded-xl
+                   bg-blue-900 dark:bg-blue-800 text-white
+                   hover:bg-blue-800 dark:hover:bg-blue-700"
+          >
+            soporte.andsh@gmail.com
+          </a>
+        </div>
+
+        <p class="mt-4 text-center text-xs text-slate-400 dark:text-slate-600 px-1">
+          Última actualización: 23 de agosto de 2026
+        </p>
+      </aside>
+
+      <!-- ──────────────────── DOCUMENT VIEWER ── -->
+      <div id="doc-viewer" class="flex-1 min-w-0">
+        <!-- El contenido se carga dinámicamente vía fetch() en app.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  FOOTER                                    -->
+  <!-- ══════════════════════════════════════════ -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400 dark:text-slate-600">
+      <p>© 2026 Andy Jefferson Sullcaray Huaman. Todos los derechos reservados.</p>
+      <p>Aplicación <strong class="text-slate-500 dark:text-slate-500">1 Sol</strong> · Huancayo, Perú</p>
+    </div>
+  </footer>
+
+  <!-- Lógica de la app -->
+  <script src="app.js" defer></script>
+
+</body>
+</html>
