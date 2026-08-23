@@ -1,5 +1,5 @@
 Términos y Condiciones de Uso — 1 Sol
-Última actualización: 23 de agosto de 2026
+Última actualización: 24 de agosto de 2026
 
 1. Introducción y aceptación
 Los presentes Términos y Condiciones regulan el acceso y uso de la aplicación móvil "1 Sol", de titularidad de Andy Jefferson Sullcaray Huaman, identificado con DNI N.° 60905577, persona natural domiciliada en El Tambo, Huancayo, Junín, Perú (en adelante, el "Titular" o "nosotros").
