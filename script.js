@@ -65,3 +65,68 @@ function updateReadingProgress() {
 
 window.addEventListener('scroll', updateReadingProgress, { passive: true });
 updateReadingProgress();
+
+function escapeHtml(text) {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function linkifyEmails(text) {
+  return text.replace(/([\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g, '<a href="mailto:$1">$1</a>');
+}
+
+function boldLeadingLabel(text) {
+  return text.replace(/^([^:<]{2,60}?):\s/, '<strong>$1:</strong> ');
+}
+
+function parseLegalDocument(text) {
+  const lines = text.split('\n').map((line) => line.trim()).filter((line) => line.length > 0);
+  lines.shift();
+
+  let updated = '';
+  if (lines[0] && /^Última actualización:/i.test(lines[0])) {
+    updated = lines.shift().replace(/^Última actualización:\s*/i, '');
+  }
+
+  const topHeaderPattern = /^\d+\.\s+.+$/;
+  const subHeaderPattern = /^\d+\.\d+\s+.+$/;
+
+  let sectionCount = 0;
+  const html = lines
+    .map((line) => {
+      if (topHeaderPattern.test(line)) {
+        sectionCount += 1;
+        return `<h3>${escapeHtml(line)}</h3>`;
+      }
+      if (subHeaderPattern.test(line)) {
+        return `<h3>${escapeHtml(line)}</h3>`;
+      }
+      return `<p>${boldLeadingLabel(linkifyEmails(escapeHtml(line)))}</p>`;
+    })
+    .join('');
+
+  return { updated, sectionCount, html };
+}
+
+async function loadLegalDocument(container) {
+  const source = container.dataset.docSrc;
+  const updatedEl = container.querySelector('[data-doc-updated]');
+  const countEl = container.querySelector('[data-doc-count]');
+  const bodyEl = container.querySelector('[data-doc-body]');
+
+  try {
+    const response = await fetch(source, { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`No se pudo cargar ${source}`);
+    const text = await response.text();
+    const { updated, sectionCount, html } = parseLegalDocument(text);
+
+    updatedEl.textContent = updated ? `Última actualización: ${updated}` : '';
+    countEl.textContent = sectionCount ? `${sectionCount} ${sectionCount === 1 ? 'sección' : 'secciones'}` : '';
+    bodyEl.innerHTML = html;
+  } catch (error) {
+    updatedEl.textContent = '';
+    countEl.textContent = '';
+    bodyEl.innerHTML = '<p>No se pudo cargar el documento. Intenta recargar la página.</p>';
+  }
+}
+
+document.querySelectorAll('[data-doc-src]').forEach(loadLegalDocument);
