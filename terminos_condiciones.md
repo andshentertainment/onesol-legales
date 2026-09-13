@@ -24,7 +24,9 @@ La Aplicación no constituye una billetera digital, plataforma financiera, siste
 
 4. Descargo de Responsabilidad (BCRP)
 Las representaciones gráficas, visuales o animadas de monedas peruanas dentro de la Aplicación tienen un fin puramente recreativo y artístico. Esta Aplicación no posee afiliación, patrocinio, autorización, ni vínculo oficial alguno con el Banco Central de Reserva del Perú (BCRP) ni con ninguna entidad gubernamental.
-Los elementos digitales mostrados, obtenidos o desbloqueados en esta plataforma no tienen valor monetario real, no son intercambiables por dinero físico, bienes o servicios, y no representan moneda de curso legal.
+
+Los elementos digitales mostrados, obtenidos o desbloqueados en esta plataforma no tienen valor monetario real, no son intercambiables por dinero físico, bienes o servicios, y no representan moneda de curso legal. En particular, la denominación "7 Soles" que aparece en la Aplicación es enteramente ficticia: no corresponde a ninguna moneda de curso legal emitida ni en circulación en el Perú ni en ningún otro país. Se trata de una pieza de colección digital exclusiva de la Aplicación, con fines puramente recreativos y de coleccionismo, sin que su nombre, símbolo o diseño impliquen relación alguna con el sistema monetario oficial peruano ni con el Banco Central de Reserva del Perú (BCRP).
+
 Esto incluye, sin limitarse a ello, representaciones del anverso y reverso de las monedas —incluyendo el Escudo Nacional del Perú tal como aparece en el reverso de las monedas de curso legal— que se muestran con fines exclusivamente artísticos y de coleccionismo digital, sin que ello implique uso oficial, institucional ni autorizado del símbolo patrio.
 
 5. Precio, Compras y Reembolsos
