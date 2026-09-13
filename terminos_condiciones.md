@@ -1,5 +1,5 @@
 Términos y Condiciones de Uso — 1 Sol
-Última actualización: 10 de Septiembre de 2026
+Última actualización: 12 de Septiembre de 2026
 
 1. Introducción y aceptación
 Los presentes Términos y Condiciones regulan el acceso y uso de la aplicación móvil "1 Sol", de titularidad de Andy Jefferson Sullcaray Huaman, identificado con DNI N.° 60905577, persona natural domiciliada en El Tambo, Huancayo, Junín, Perú (en adelante, el "Titular" o "nosotros").
@@ -12,7 +12,7 @@ Aplicación: el software móvil "1 Sol", disponible para dispositivos Android (y
 
 Usuario: cualquier persona que acceda, descargue o utilice la Aplicación.
 
-Contenido In-App (Compras Integradas): elementos visuales adicionales —diseños de monedas de 2 y 5 Soles— accesibles mediante un pago único dentro de la Aplicación, y temas de interfaz.
+Contenido In-App (Compras Integradas): elementos visuales adicionales —diseños de monedas de 2, 5 y 7 Soles— accesibles mediante un pago único dentro de la Aplicación, y temas de interfaz.
 
 Contenido de Objetivo: elementos visuales adicionales —diseños de monedas de menor denominación (céntimos)— que se desbloquean de forma gratuita como recompensa por el progreso del Usuario dentro del modo "Historia" de la Aplicación (por ejemplo, al completar una o más "vueltas"). Este contenido no se compra ni se paga, y no está sujeto a las secciones 5.1 a 5.6 de estos Términos, que regulan únicamente las Compras Integradas.
 
@@ -25,24 +25,25 @@ La Aplicación no constituye una billetera digital, plataforma financiera, siste
 4. Descargo de Responsabilidad (BCRP)
 Las representaciones gráficas, visuales o animadas de monedas peruanas dentro de la Aplicación tienen un fin puramente recreativo y artístico. Esta Aplicación no posee afiliación, patrocinio, autorización, ni vínculo oficial alguno con el Banco Central de Reserva del Perú (BCRP) ni con ninguna entidad gubernamental.
 Los elementos digitales mostrados, obtenidos o desbloqueados en esta plataforma no tienen valor monetario real, no son intercambiables por dinero físico, bienes o servicios, y no representan moneda de curso legal.
+Esto incluye, sin limitarse a ello, representaciones del anverso y reverso de las monedas —incluyendo el Escudo Nacional del Perú tal como aparece en el reverso de las monedas de curso legal— que se muestran con fines exclusivamente artísticos y de coleccionismo digital, sin que ello implique uso oficial, institucional ni autorizado del símbolo patrio.
 
 5. Precio, Compras y Reembolsos
 
 5.1 Precio de la Aplicación y de las Compras Integradas
-El acceso a la Aplicación mediante su adquisición en Google Play Store, así como las Compras Integradas disponibles dentro de ella (diseños de monedas de 2 y 5 Soles), tienen un precio expresado en Soles Peruanos (PEN). Dicho precio incluye los impuestos aplicables conforme a la legislación peruana (incluido el Impuesto General a las Ventas — IGV), cuando corresponda, tal como se refleja en la pantalla de pago de Google Play antes de confirmar cada transacción. Los precios están sujetos a cambios sin previo aviso; el precio vigente en cada momento es siempre el que Google Play muestre al Usuario al momento de la compra.
+El acceso a la Aplicación mediante su adquisición en Google Play Store, así como las Compras Integradas disponibles dentro de ella (diseños de monedas de 2, 5 y 7 Soles), tienen un precio expresado en Soles Peruanos (PEN). Dicho precio incluye los impuestos aplicables conforme a la legislación peruana (incluido el Impuesto General a las Ventas — IGV), cuando corresponda, tal como se refleja en la pantalla de pago de Google Play antes de confirmar cada transacción. Los precios están sujetos a cambios sin previo aviso; el precio vigente en cada momento es siempre el que Google Play muestre al Usuario al momento de la compra.
 
 5.2 Procesamiento de pagos
 Todas las transacciones —tanto la adquisición de la Aplicación como las Compras Integradas— se gestionan exclusivamente a través de los sistemas de facturación de Google (Google Play Billing). El Titular no procesa pagos directamente ni almacena información financiera del Usuario (números de tarjeta, cuentas bancarias u otros medios de pago).
 
 5.3 Licencia de uso
-La compra de contenido visual adicional (monedas de 2 y 5 Soles) otorga una licencia limitada, personal, no exclusiva y no transferible para acceder a dicho contenido digital únicamente dentro de la interfaz de la Aplicación, mientras dicha compra se mantenga vigente conforme a la sección 5.5.
+La compra de contenido visual adicional (monedas de 2, 5 y 7 Soles) otorga una licencia limitada, personal, no exclusiva y no transferible para acceder a dicho contenido digital únicamente dentro de la interfaz de la Aplicación, mientras dicha compra se mantenga vigente conforme a la sección 5.5.
 
 5.4 Política de Reembolsos
 Las solicitudes de reembolso, tanto respecto del precio de la Aplicación como de las Compras Integradas, se rigen estrictamente por la ventana de autoservicio de Google Play (habitualmente 48 horas desde el momento de la compra), plazo definido unilateralmente por Google y sujeto a cambio conforme a sus propias políticas.
 Transcurrido dicho plazo, todas las ventas se consideran finales y no reembolsables por parte del Titular, salvo que el Usuario acredite fehacientemente una falla técnica que impida por completo el uso del producto adquirido y que el soporte del Titular, contactado a través del correo señalado en la sección de Contacto, no haya podido solucionar en un plazo razonable.
 
 5.5 Revocación de Beneficios
-Si el Usuario solicita y obtiene un reembolso —ya sea directamente a través de Google Play, o mediante una reversión o contracargo (chargeback) iniciado con su entidad bancaria o medio de pago— el Titular revocará de inmediato el acceso al contenido correspondiente a dicha compra. La Aplicación verifica periódicamente, contra los registros de Google Play, que las Compras Integradas del Usuario continúen vigentes; al detectar que una compra fue reembolsada o cancelada, el contenido asociado (moneda de 2 o 5 Soles) se bloquea automáticamente y el Usuario vuelve a la moneda de 1 Sol, incluida por defecto con la Aplicación. Esta revocación no afecta a otras compras del Usuario que continúen vigentes.
+Si el Usuario solicita y obtiene un reembolso —ya sea directamente a través de Google Play, o mediante una reversión o contracargo (chargeback) iniciado con su entidad bancaria o medio de pago— el Titular revocará de inmediato el acceso al contenido correspondiente a dicha compra. La Aplicación verifica periódicamente, contra los registros de Google Play, que las Compras Integradas del Usuario continúen vigentes; al detectar que una compra fue reembolsada o cancelada, el contenido asociado (moneda de 2, 5 o 7 Soles) se bloquea automáticamente y el Usuario vuelve a la moneda de 1 Sol, incluida por defecto con la Aplicación. Esta revocación no afecta a otras compras del Usuario que continúen vigentes.
 
 5.6 Restauración de compras
 El Usuario puede restaurar manualmente sus compras previas y vigentes desde la sección de Ajustes de la Aplicación ("Restaurar compras"). La Aplicación también intenta restaurar dichas compras de forma automática cada vez que se abre, sin necesidad de acción del Usuario.
